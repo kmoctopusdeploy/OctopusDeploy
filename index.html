@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Octopus Deploy</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/button.css" />
+    <link rel="stylesheet" href="css/intro.css" />
+    <link rel="stylesheet" href="css/tabs.css" />
+
+    <meta
+      name="description"
+      content="Octopus Deploy recruitment task"
+    />
+  </head>
+  <body class="theme--dark">
+    <section class="section">
+      <div class="section__wrapper section__wrapper--center intro">
+        <h1>Octopus Deploy<br/>recruitment task</h1>
+        <p>Click button to switch theme color</p>
+        <button
+          class="button"
+          data-theme-button
+          aria-label="Change website theme"
+        >
+          Change theme
+        </button>
+      </div>
+    </section>
+    <section class="section">
+      <div class="section__wrapper">
+        <div class="tabs" data-tabs aria-label="Tabbed Content Navigation">
+          <div class="tabs__nav" role="tablist">
+            <button
+              class="tabs__button"
+              data-tabs-button
+              role="tab"
+              aria-controls="tab1-panel"
+              id="tab1-button"     
+            >
+              Tab 1
+            </button>
+            <button
+              class="tabs__button"
+              data-tabs-button
+              role="tab"
+              aria-controls="tab2-panel"
+              id="tab2-button"            
+            >
+              Tab 2
+            </button>
+            <button
+              class="tabs__button"
+              data-tabs-button
+              role="tab"
+              aria-controls="tab3-panel"
+              id="tab3-button"     
+            >
+              Tab 3
+            </button>
+          </div>
+          <div class="tabs__container">
+            <div class="tabs__container--reel">
+              <div class="tabs__card" data-tabs-card role="tabpanel" id="tab1-panel" aria-labelledby="tab1-button" hidden>
+                <h3 class="tabs__card-title">Tab 1</h3>
+                <p class="tabs_card-description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Quisquam voluptatum, voluptate, quibusdam, quia voluptas quod
+                  dolorum voluptatibus quos quas quidem natus? Quisquam
+                  voluptatum, voluptate, quibusdam, quia voluptas quod dolorum
+                  voluptatibus quos quas quidem natus?
+                </p>
+              </div>
+              <div class="tabs__card" data-tabs-card role="tabpanel" id="tab2-panel" aria-labelledby="tab2-button" hidden>
+                <h3 class="tabs__card-title">Tab 2</h3>
+                <p class="tabs_card-description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Quisquam voluptatum, voluptate, quibusdam, quia voluptas quod
+                  dolorum voluptatibus quos quas quidem natus? Quisquam
+                  voluptatum, voluptate, quibusdam, quia voluptas quod dolorum
+                  voluptatibus quos quas quidem natus?
+                </p>
+              </div>
+              <div class="tabs__card" data-tabs-card role="tabpanel" id="tab3-panel" aria-labelledby="tab3-button" hidden>
+                <h3 class="tabs__card-title">Tab 3</h3>
+                <p class="tabs_card-description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Quisquam voluptatum, voluptate, quibusdam, quia voluptas quod
+                  dolorum voluptatibus quos quas quidem natus? Quisquam
+                  voluptatum, voluptate, quibusdam, quia voluptas quod dolorum
+                  voluptatibus quos quas quidem natus?
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="js/tabsSwitcher.js"></script>
+    <script src="js/themeModeSwitcher.js"></script>
+  </body>
+</html>

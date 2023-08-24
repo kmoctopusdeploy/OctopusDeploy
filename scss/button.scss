@@ -1,0 +1,62 @@
+@import 'mixins';
+
+@keyframes scrollBackground {
+  0% {
+      background-position: 0% 50%;
+  }
+  20% {
+      background-position: 25% 50%;
+  }
+  35% {
+      background-position: 40% 50%;
+  }
+  50% {
+      background-position: 50% 50%;
+  }
+  80% {
+      background-position: 80% 50%;
+  }
+  100% {
+      background-position: 100% 50%;
+  }
+}
+
+.button {
+  background: linear-gradient(268.25deg, var(--background-gradient-end) .46%, var(--background-gradient-start) 97%), linear-gradient(95.05deg, var(--outline-gradient-start) 0, var(--outline-gradient-end) 54.06%);
+  background: var(--theme-background-secondary);
+  border-radius: var(--border-radius-small, 6px);
+  color: var(--color-blue, #2f95e3);
+  font-size: var(--font-size-normal);
+  font-weight: var(--font-weight-bold, 700);
+  padding: 10px 40px;
+  width: fit-content;
+  position: relative;
+  transition-property: box-shadow, color;
+  transition-duration: var(--duration-default);
+  box-shadow: var(--box-shadow);
+
+  &::before {
+    @include gradientBackground(linear-gradient(95.05deg, var(--outline-gradient-start, #3fa3ef), var(--outline-gradient-end, #1d3b53), var(--outline-gradient-start, #3fa3ef), var(--outline-gradient-end, #1d3b53)));
+
+    border-radius: var(--border-radius-small, 6px);
+    background-size: 300% 100%;
+  }
+
+  &:hover {
+    box-shadow: var(--box-shadow-hover);
+    color: var(--color-blue-light, #1fc0ff);
+
+    &:before {
+      animation: scrollBackground 2s linear infinite;
+    }
+  }
+
+  &:active {
+    box-shadow: var(--box-shadow-active);
+  }
+
+  .theme--light & {
+    background: var(--color-blue, #2f95e3);
+    color: var(--color-white, #fff);
+  }
+}

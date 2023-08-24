@@ -1,0 +1,19 @@
+@mixin gradientBackground($background) {
+    --background-offset: -1px;
+
+    content: "";
+    border-radius: var(--border-radius-medium, 10px);
+    height: calc(100% - 2 * var(--background-offset, -1px));
+    left: var(--background-offset, -1px);
+    position: absolute;
+    top: var(--background-offset, -1px);
+    width: calc(100% - 2 * var(--background-offset, -1px));
+    z-index: -2;
+    background: $background;
+
+
+    .theme--light & {
+      background: var(--color-grey, #f9fafa);
+    }
+  }
+  

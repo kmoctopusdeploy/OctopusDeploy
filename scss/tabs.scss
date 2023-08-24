@@ -1,0 +1,80 @@
+@import 'mixins';
+
+.tabs {
+  --tabs-amount: 0;
+  --active-tab-index: 0;
+  --tab-width: calc(100% / var(--tabs-amount));
+  --tabs-translate-value: calc((var(--active-tab-index) * (var(--tab-width) + var(--gap-medium) / var(--tabs-amount)) ) * (-1));
+
+
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-large);
+  background: var(--theme-background-secondary);
+  border-radius: var(--border-radius-medium, 10px);
+  box-shadow: var(--box-shadow);
+  position: relative;
+  padding: var(--gap-medium);
+
+  &:before {
+    @include gradientBackground(linear-gradient(180.2deg,#173045 80.28%,#094777 91.98%));
+  }
+
+  &__container {
+    position: relative;
+    overflow: hidden;
+    
+    &--reel {
+      gap: var(--gap-medium);
+      display: flex;
+      width: calc((100% * var(--tabs-amount) + 2 * var(--gap-medium)));
+      width: calc((100% * var(--tabs-amount)));
+      transform: translateX(var(--tabs-translate-value));
+      transition: transform var(--duration-default) ease-in-out;
+    }
+  }
+
+  &__nav {
+    position: relative;
+    width: fit-content;
+    color: var(--color-text-secondary);
+
+    &::after {
+      content: "";
+      display: block;
+      height: 2px;
+      width: calc(100% / var(--tabs-amount));
+      transform: translateX(calc(100% * var(--active-tab-index)));
+      transition: transform var(--duration-default) ease-in-out;
+      background: var(--color-blue-light, #1fc0ff);
+      margin-top: 8px;
+    }
+  }
+
+  &__button {
+    padding: 5px 15px;
+    color: var(--color-text-secondary);
+    transition: color var(--duration-default) ease-in-out;
+
+    &:hover {
+      color: var(--color-text-primary);
+    }
+
+    &.is-active {
+      color: var(--color-blue-light, #1fc0ff);
+      pointer-events: none;
+    }
+  }
+
+  &__card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-small);
+    
+    &-description {
+      color: var(--color-text-secondary);
+    }
+  }
+}

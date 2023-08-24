@@ -1,0 +1,16 @@
+
+
+.theme {
+  &--light {
+    --theme-background-primary: var(--color-grey);
+    --theme-background-secondary: var(--color-white);
+    --color-text-primary: var(--color-dark);
+    --color-text-secondary: var(--color-dark);
+    --box-shadow: 0 10px 35px rgba(133,152,165,.1);
+    --box-shadow-hover: 0 5px 25px rgba(133,152,165,.4)
+  }
+  &--dark {
+    --theme-background-primary: var(--color-dark-primary);
+    --theme-background-secondary: var(--color-dark-secondary);
+  }
+}
