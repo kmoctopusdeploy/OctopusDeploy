@@ -6,8 +6,6 @@
   --tab-width: calc(100% / var(--tabs-amount));
   --tabs-translate-value: calc((var(--active-tab-index) * (var(--tab-width) + var(--gap-medium) / var(--tabs-amount)) ) * (-1));
 
-
-
   display: flex;
   flex-direction: column;
   gap: var(--gap-large);
@@ -48,7 +46,6 @@
       transform: translateX(calc(100% * var(--active-tab-index)));
       transition: transform var(--duration-default) ease-in-out;
       background: var(--color-blue-light, #1fc0ff);
-      margin-top: 8px;
     }
   }
 
